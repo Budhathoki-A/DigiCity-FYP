@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  src: local("SFProDisplay-Regular"),
+    url(./assets/SFPro/SFProDisplay-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "SFProDisplay-Bold";
+  src: local("SFProDisplay-Bold"),
+    url(./assets/SFPro/SFProDisplay-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  src: local("SFProDisplay-Semibold"),
+    url(./assets/SFPro/SFProDisplay-Semibold.ttf) format("truetype");
+}
+:root {
+  --accent-color: #ffe678;
+  --primary-color: #a36eba;
+  --text-color: #2c3346;
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  font-family: "SFProDisplay-Regular", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  scroll-behavior: smooth;
+}
+* {
+  outline: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "SFProDisplay-Bold";
+}
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.course-video {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
