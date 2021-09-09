@@ -208,7 +208,6 @@ export function McqView(props) {
       setGoodResult(true);
     }
     let finalResult = { score: finalScore, id: user.id };
-
     selectedQuiz.participants = [...selectedQuiz.participants, finalResult];
 
     await editContent("quiz", id, selectedQuiz);

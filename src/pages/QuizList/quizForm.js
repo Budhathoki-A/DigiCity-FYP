@@ -69,7 +69,7 @@ export function QuizForm({ currentQuiz, submitQuiz }) {
       title,
       questionList,
       category,
-      participants:[]
+      participants: [],
     };
     await submitQuiz(finalQuiz);
     setLoading(false);
@@ -88,6 +88,7 @@ export function QuizForm({ currentQuiz, submitQuiz }) {
           onChange={(e) => setTitle(e.target.value)}
           width={"90%"}
           placeholder="title"
+          required={true}
         />
         <Selectfield
           selectOption={categoryList && categoryList}

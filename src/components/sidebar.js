@@ -115,7 +115,7 @@ export function Sidebar(props) {
               </NavItem>
             </Link>
           )}{" "}
-          {(user.auth === authority.admin) || (user.auth === authority.teacher) && (
+          {(user.auth === authority.admin || user.auth === authority.teacher) && (
             <Link to="/admin/category">
               <NavItem>
                 <IconFileAdd size={"25"} color={"#a852ce"} />{" "}
@@ -123,7 +123,7 @@ export function Sidebar(props) {
               </NavItem>
             </Link>
           )}
-          {(user.auth === authority.admin) || (user.auth === authority.teacher) && (
+          {(user.auth === authority.admin || user.auth === authority.teacher) && (
             <Link to="/admin/course">
               <NavItem>
                 <IconCreate size={"25"} color={"#a852ce"} />{" "}
@@ -131,7 +131,7 @@ export function Sidebar(props) {
               </NavItem>
             </Link>
           )}
-          {(user.auth === authority.admin) || (user.auth === authority.teacher) && (
+          {(user.auth === authority.admin || user.auth === authority.teacher)   && (
             <Link to="/admin/quiz">
               <NavItem>
                 <IconBookQuiz size={"25"} color={"#a852ce"} />{" "}

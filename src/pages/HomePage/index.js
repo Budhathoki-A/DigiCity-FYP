@@ -2,15 +2,14 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import kidsLearningImg from "../../assets/kids-learning.jpg";
-
 import { TopLayer } from "../../components/topLayer";
-import { IconMath, IconTube, MathSvg, ScienceSvg } from "../../utils/icons";
-import { useCourses } from "../../context/courseContext";
 import { useCategory } from "../../context/categoryContext";
-import { mathId, scienceId, serverUrl } from "../../utils/info";
-import { PayPalButton } from "react-paypal-button-v2";
-import { clientId } from "../../paypal";
-import axios from "axios";
+import { useCourses } from "../../context/courseContext";
+import { IconMath, IconTube, MathSvg, ScienceSvg } from "../../utils/icons";
+import { mathId, scienceId } from "../../utils/info";
+
+
+
 
 const Wrapper = styled.div``;
 

@@ -1,5 +1,5 @@
-export const scienceId = "aYJtJsHAbHBAejT5noNE";
-export const mathId = "icMwvqokt5ssDwIxUu7Q";
+export const scienceId = "8BRxI3tMY8g33sMPhvtr";
+export const mathId = "H4UoGvlgMjt7j6JCk1jn";
 export const authority = {
   child: 0,
   parents: 1,
