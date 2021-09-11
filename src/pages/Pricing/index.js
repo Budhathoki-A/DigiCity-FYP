@@ -1,8 +1,7 @@
 import axios from "axios";
 import moment from "moment";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
 import styled from "styled-components";
 import moneyImg from "../../assets/art-9.png";
 import { TopLayer } from "../../components/topLayer";

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
+import { Document, Page,pdfjs } from 'react-pdf/dist/esm/entry.parcel';
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import { useParams } from "react-router-dom";
 import Youtube from "react-youtube";
@@ -8,6 +8,9 @@ import sittingKids from "../../assets/sitting-kids.jpg";
 import { TopLayer } from "../../components/topLayer";
 import { useCourses } from "../../context/courseContext";
 import { BowTieSvg } from "../../utils/icons";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
 
 const Wrapper = styled.div``;
 const Content = styled.div`
