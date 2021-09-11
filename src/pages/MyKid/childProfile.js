@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import layerTrophy from "../../assets/layer-profile.png";
 import { useGetOneDocument } from "../../callback/firestoreCallback";
 import { useAuth } from "../../context/authContext";
-import layerTrophy from "../../assets/layer-profile.png";
 import { IconTrophy } from "../../utils/icons";
-import trophy1 from "../../assets/trophy2.png";
-import trophy2 from "../../assets/trophy4.png";
 
 const Card = styled.div`
   max-width: 350px;
@@ -91,6 +89,7 @@ export function ChildProfile(props) {
     } else {
       setChildProfile(user.child[0]);
     }
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
   return (
     <>

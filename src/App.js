@@ -1,19 +1,19 @@
 import React from "react";
-import { useAuth } from "./context/authContext";
-import { LandingPage } from "./pages/LandingPage";
-import Routes from "./pages/Routes";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Navbar } from "./pages/LandingPage/navbar";
-import { Login } from "./pages/LandingPage/login";
-import { CoursesProvider } from "./context/courseContext";
-import { CategoryProvider } from "./context/categoryContext";
-import { QuizProvider } from "./context/quizContext";
-import { ParentsSignup } from "./pages/LandingPage/parentsSignup";
-import { AllLogin, ParentsLogin } from "./pages/LandingPage/AllLogin";
+import { LoadingPage } from "./components/loading";
+import { useAuth } from "./context/authContext";
 import { AvatarProvider } from "./context/avatarContext";
 import { AwardProvider } from "./context/awardContext";
-import { LoadingPage } from "./components/loading";
+import { CategoryProvider } from "./context/categoryContext";
 import { ChildWorkProvider } from "./context/childWorkContext";
+import { CoursesProvider } from "./context/courseContext";
+import { QuizProvider } from "./context/quizContext";
+import { LandingPage } from "./pages/LandingPage";
+import { AllLogin } from "./pages/LandingPage/AllLogin";
+import { Login } from "./pages/LandingPage/login";
+import { Navbar } from "./pages/LandingPage/navbar";
+import { ParentsSignup } from "./pages/LandingPage/parentsSignup";
+import Routes from "./pages/Routes";
 function App(props) {
   const { user, loading } = useAuth();
 

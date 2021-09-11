@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { TopLayer } from "../../components/topLayer";
-import avatarFull from "../../assets/avatar.png";
-import avatar1 from "../../assets/avatar1.png";
-import avatar2 from "../../assets/avatar2.png";
-import avatar3 from "../../assets/avatar3.png";
-import avatar4 from "../../assets/avatar4.png";
-import avatar5 from "../../assets/avatar5.png";
 import layerFull from "../../assets/layer-5.svg";
 import layerTrophy from "../../assets/layer-profile.png";
-import { IconTrophy } from "../../utils/icons";
-import trophy1 from "../../assets/trophy2.png";
-import trophy2 from "../../assets/trophy4.png";
 import profileCartoon from "../../assets/profile-cartoon.jpg";
+import { useEditContent } from "../../callback";
+import { TopLayer } from "../../components/topLayer";
 import { useAuth } from "../../context/authContext";
 import { useAvatar } from "../../context/avatarContext";
-import { useEditContent } from "../../callback";
+import { IconTrophy } from "../../utils/icons";
 
 const TopPart = styled.div`
   display: flex;

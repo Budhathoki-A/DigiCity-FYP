@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import bg from "../../assets/cloud-bg.png";
+import React from "react";
 import styled from "styled-components";
+import bg from "../../assets/cloud-bg.png";
 import { useAuth } from "../../context/authContext";
-import { Createchildprofile } from "./createchildProfile";
 import { ChildProfile } from "./childProfile";
+import { Createchildprofile } from "./createchildProfile";
 
 const Wrapper = styled.div`
   background: #dea5ea url(${bg}) no-repeat;

@@ -1,26 +1,17 @@
 import React from "react";
-import styled from "styled-components";
-import { TopLayer } from "../../components/topLayer";
-import mathQuiz from "../../assets/math-quiz.jpg";
-import { useChildWork } from "../../context/childWorkContext";
 import { useHistory } from "react-router-dom";
+import styled from "styled-components";
+import mathQuiz from "../../assets/math-quiz.jpg";
 import { Button } from "../../components/button";
-import { authority } from "../../utils/info";
+import { TopLayer } from "../../components/topLayer";
 import { useAuth } from "../../context/authContext";
-import emptyImg from "../../assets/empty.jpg";
+import { useChildWork } from "../../context/childWorkContext";
+import { authority } from "../../utils/info";
 
 const Content = styled.div`
   padding: 10px 15px;
 `;
-const Header = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-  > h3 {
-    color: #234fb1;
-  }
-`;
+
 
 const ListContainer = styled.div`
   padding: 10px 0;

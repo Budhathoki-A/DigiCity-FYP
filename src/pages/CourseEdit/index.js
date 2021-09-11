@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {
   useGetDownloadUrl,
-  useUploadInStorage,
+  useUploadInStorage
 } from "../../callback/firebaseStorageCallback";
 import { useEditContent } from "../../callback/firestoreCallback";
 import { useCourses } from "../../context/courseContext";
-import { useQuiz } from "../../context/quizContext";
 import { CourseForm } from "../Courses/courseForm";
-import { QuizForm } from "../QuizList/quizForm";
 
 export function CourseEdit(props) {
   const courseEdit = useEditContent();

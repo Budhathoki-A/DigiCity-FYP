@@ -1,14 +1,13 @@
+import axios from "axios";
+import moment from "moment";
 import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
-import styled from "styled-components";
-import { TopLayer } from "../../components/topLayer";
-import axios from "axios";
-import moneyImg from "../../assets/art-9.png";
-import layerImg from "../../assets/landing-layer-2.png";
-import { useAuth } from "../../context/authContext";
 import { useEffect } from "react/cjs/react.development";
-import { serverUrl, subscriptionStatus } from "../../utils/info";
-import moment from "moment";
+import styled from "styled-components";
+import moneyImg from "../../assets/art-9.png";
+import { TopLayer } from "../../components/topLayer";
+import { useAuth } from "../../context/authContext";
+import { serverUrl, stripePriceId, subscriptionStatus } from "../../utils/info";
 
 const Wrapper = styled.div``;
 const Content = styled.div`
@@ -64,11 +63,13 @@ export function Pricing(props) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    console.log("a");
+  console.log("Pricing")
     if (query && query.substr(1)) {
+      console.log("Pricing1")
       const sessionId = query.substr(1);
       createNewSubsciption(sessionId);
     }
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   const createNewSubsciption = async (sessionId) => {
@@ -79,7 +80,6 @@ export function Pricing(props) {
         sessionId: sessionId,
         userId: user.id,
       });
-      console.log(res);
       if (res.data.stripeCustomerId) {
         user["stripeCustomerId"] = res.data.stripeCustomerId;
         user["stripeSubId"] = res.data.stripeSubId;
@@ -108,7 +108,7 @@ export function Pricing(props) {
       console.log("creating");
       const res = await axios.post(`${serverUrl}/create-checkout-session`, {
         domainUrl: url,
-        priceId: "price_1JNy9aDyJa9bXhOXLmUn9QBI",
+        priceId: stripePriceId,
       });
       console.log(res);
       window.location.href = res.data.redirectUrl;

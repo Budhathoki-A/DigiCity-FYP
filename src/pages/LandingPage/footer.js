@@ -34,14 +34,7 @@ const FooterCard = styled.footer`
       font-size: 12px ;
   }
 `;
-const LayerImg = styled.img`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-`;
+
 const Line = styled.div`
   border-top: 1px solid #dadada;
   width: 100%;

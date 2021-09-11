@@ -1,5 +1,4 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { useAddContent } from "../../callback";
 import { useQuiz } from "../../context/quizContext";
 import { QuizForm } from "../QuizList/quizForm";

@@ -10,10 +10,7 @@ import { useCategory } from "../../context/categoryContext";
 import { generateId } from "../../utils/x";
 import { useHistory } from "react-router-dom";
 
-const options = {
-  cMapUrl: "cmaps/",
-  cMapPacked: true,
-};
+
 
 const CourseWrapper = styled.div`
   width: 85%;

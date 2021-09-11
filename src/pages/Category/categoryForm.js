@@ -1,19 +1,12 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { Selectfield } from "../../components/selectField";
+import { Button } from "../../components/button";
 import TextField from "../../components/textField";
 import { TopLayer } from "../../components/topLayer";
-import { Button } from "../../components/button";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import { useCategory } from "../../context/categoryContext";
 import { generateId } from "../../utils/x";
-import { useHistory } from "react-router-dom";
 
-const options = {
-  cMapUrl: "cmaps/",
-  cMapPacked: true,
-};
 
 const CourseWrapper = styled.div`
   width: 85%;

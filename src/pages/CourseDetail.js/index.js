@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import { TopLayer } from "../../components/topLayer";
-import Youtube from "react-youtube";
-import sittingKids from "../../assets/sitting-kids.jpg";
-import { BowTieSvg } from "../../utils/icons";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import { useParams } from "react-router-dom";
+import Youtube from "react-youtube";
+import styled from "styled-components";
+import sittingKids from "../../assets/sitting-kids.jpg";
+import { TopLayer } from "../../components/topLayer";
 import { useCourses } from "../../context/courseContext";
+import { BowTieSvg } from "../../utils/icons";
 
 const Wrapper = styled.div``;
 const Content = styled.div`
@@ -78,7 +78,7 @@ const Button = styled.button`
 `;
 
 export function CourseDetails(props) {
-  const { data: courseList, setData: setCourseList } = useCourses();
+  const { data: courseList } = useCourses();
   const { id } = useParams();
   const [pdf, setPdf64] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import bg from "../../assets/cloud-bg.png";
+import { useLogin } from "../../callback";
 import { Button } from "../../components/button";
 import TextField from "../../components/textField";
-import bg from "../../assets/cloud-bg.png";
 import { useAuth } from "../../context/authContext";
-import { useLogin } from "../../callback";
-import { useHistory } from "react-router-dom";
 
 const Wrapper = styled.div`
   background: #dea5ea url(${bg}) no-repeat;
@@ -32,8 +31,7 @@ const Error = styled.p`
 `;
 export function AllLogin(props) {
   const login = useLogin();
-  const history = useHistory();
-  const { error: authError, setError: setAuthError, setUser } = useAuth();
+   const { error: authError, setError: setAuthError } = useAuth();
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -45,7 +43,7 @@ export function AllLogin(props) {
     setAuthError(null);
     setLoading(true);
     try {
-      const user = await login(email, password);
+      await login(email, password);
     } catch (error) {
       if (error.code === "auth/wrong-password") {
         setError("Invalid password. Try again.");

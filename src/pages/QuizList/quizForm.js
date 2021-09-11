@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
+import { Button } from "../../components/button";
 import { Selectfield } from "../../components/selectField";
 import TextField from "../../components/textField";
 import { TopLayer } from "../../components/topLayer";
-import { Button } from "../../components/button";
-import { Question } from "./question";
 import { useCategory } from "../../context/categoryContext";
 import { generateId } from "../../utils/x";
-import { useHistory } from "react-router-dom";
+import { Question } from "./question";
 
 const QuizWrapper = styled.div`
   width: 85%;
@@ -32,7 +32,6 @@ const AddButton = styled.div`
 const QuestionList = styled.div``;
 export function QuizForm({ currentQuiz, submitQuiz }) {
   const history = useHistory();
-  const fileUploadRef = useRef();
   const { data: categoryList } = useCategory();
   const [category, setCategory] = useState(null);
   const [title, setTitle] = useState(null);

@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import loginImg from "../../assets/art-1.png";
-import signYourKidImg from "../../assets/art-7.png";
-import kidLearn from "../../assets/art-6.png";
-import { Content } from "./content";
 import { IconPuzzle, IconUser, IconVideoPlay } from "../../utils/icons";
+import { Content } from "./content";
 
 const Wrapper = styled.div`
   display: flex;

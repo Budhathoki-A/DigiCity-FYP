@@ -142,6 +142,7 @@ export function McqView(props) {
       }
     }
     setLoading(false);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, quizList]);
 
   const handleAnswer = (userAnswer, correctAnswer) => {
@@ -248,7 +249,7 @@ export function McqView(props) {
                           }
                         >
                           <span>
-                            <img src={icons[i]} />
+                            <img src={icons[i]} alt='' />
                           </span>
                           <div>
                             {questionList[currentIndex].answerList[answer]}

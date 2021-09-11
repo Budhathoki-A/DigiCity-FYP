@@ -24,6 +24,7 @@ export function ChildWorkDetail(props) {
         });
       setSelectedWork(selected);
     }
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [childWorks]);
 
   return (

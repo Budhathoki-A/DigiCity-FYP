@@ -1,7 +1,6 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import avatarImg from "../assets/avatar.png";
 import { useLogout } from "../callback";
 import { useAuth } from "../context/authContext";
 import {
@@ -13,7 +12,7 @@ import {
   IconKid,
   IconLogout,
   IconPriceTag,
-  IconProfile,
+  IconProfile
 } from "../utils/icons";
 import { authority } from "../utils/info";
 const StyledSidebar = styled.div`
@@ -92,7 +91,6 @@ const NavItem = styled.li`
 `;
 export function Sidebar(props) {
   const logout = useLogout();
-  const history = useHistory();
   const { user } = useAuth();
   return (
     <>
